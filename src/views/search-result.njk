@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% set title = "Resultado da Busca" %}
+{% set pageId="page-search-result" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/search-result.css">
+{% endblock %}
+
+
+
+{% block content %}
+    {% include "partials/page-header.njk" %}
+
+    <main>
+        <h4>
+            <strong>2 pontos</strong> encontrados
+        </h4>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1401&q=80" alt="colectoria">
+                <h1>Colectoria</h1>
+                <h3>Resíduos EletrÇonicos, Lâmpadas</h3>
+                <address>
+                    Rio do Sul, Santa Catariana<br/>
+                    Guilherme Gemballa, Jardmin América <br/>
+                    N° 260
+                </address>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1350&q=80" alt="colectoria">
+                <h1>Papersider</h1>
+                <h3>Papéis e Papelão</h3>
+                <address>
+                    Rio do Sul, Santa Catariana<br/>
+                    Guilherme Gemballa, Jardmin América <br/>
+                    N° 260
+                </address>
+            </div>
+        </div>
+    </main>
+{% endblock %}
