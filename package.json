@@ -17,7 +17,9 @@
   "homepage": "https://github.com/DouglasSerena/NLW#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.1",
+    "sqlite": "^4.0.10",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

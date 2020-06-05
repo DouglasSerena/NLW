@@ -8,38 +8,35 @@
     <link rel="stylesheet" href="./styles/search-result.css">
 {% endblock %}
 
-
-
 {% block content %}
     {% include "partials/page-header.njk" %}
 
     <main>
-        <h4>
-            <strong>2 pontos</strong> encontrados
-        </h4>
 
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1401&q=80" alt="colectoria">
-                <h1>Colectoria</h1>
-                <h3>Resíduos EletrÇonicos, Lâmpadas</h3>
-                <address>
-                    Rio do Sul, Santa Catariana<br/>
-                    Guilherme Gemballa, Jardmin América <br/>
-                    N° 260
-                </address>
-            </div>
+        {% if total > 0 %}
+            <h4>
+                <strong>{{ total }} pontos</strong>
+                encontrados
+            </h4>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1350&q=80" alt="colectoria">
-                <h1>Papersider</h1>
-                <h3>Papéis e Papelão</h3>
-                <address>
-                    Rio do Sul, Santa Catariana<br/>
-                    Guilherme Gemballa, Jardmin América <br/>
-                    N° 260
-                </address>
+            <div class="cards">
+                {% for place in places %}
+                    <div class="card">
+                        <img src="{{ place.image }}" alt="{{ place.name }}">
+                        <h1>{{ place.name }}</h1>
+                        <h3>{{ place.items }}</h3>
+                        <address>
+                            {{ place.city }},
+                            {{ place.state }}<br/>
+                            {{ place.address }}<br/>
+                            {{ place.address2 }}
+                        </address>
+                    </div>
+                {% endfor %}
             </div>
-        </div>
+        {% else %}
+            <h4><strong>Nenhum</strong> Itens não encontrado</h4>
+        {% endif %}
+
     </main>
 {% endblock %}

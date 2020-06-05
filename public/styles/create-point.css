@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-#page-create-point header a {
+#page-create-point header .nav {
     color: var(--title-color);
     font-weight: bold;
 
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-#page-create-point header a span {
+#page-create-point header .nav span {
     margin-right: 16px;
     background-image: url(./../assets/arrow-left.svg);
 

@@ -32,7 +32,14 @@
         position: absolute;
         bottom: 48px;
         left: 50%;
+
+        min-width: 250px;
         transform: translateX(-50%);
+    }
+    
+    #page-home header a span {
+        max-width: 20px;
+        min-width: 20px;
     }
 
     #page-home main {
@@ -70,7 +77,7 @@
         text-align: center;
     }
 
-    #page-create-point header a {
+    #page-create-point header .nav {
         background-color: #f5f5f5;
 
         width: 200px;
@@ -147,7 +154,7 @@
         text-align: center;
     }
 
-    #page-search-result header a {
+    #page-search-result header .nav {
         background-color: #f5f5f5;
 
         width: 200px;

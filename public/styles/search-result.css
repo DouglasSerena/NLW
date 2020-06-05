@@ -1,13 +1,21 @@
+body {
+    background-color: white;
+    
+    margin-bottom: 80px;
+}
+
 body::after {
     content: "";
 
-    background-color: white;
+    background-color: #F0F0F5;
 
-    position: fixed;
-    top: 260px;
+    position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
+    height: 16rem;
 
     z-index: -1;
 }
@@ -27,7 +35,7 @@ body::after {
     align-items: center;
 }
 
-#page-search-result header a {
+#page-search-result header .nav {
     color: var(--title-color);
     font-weight: bold;
 
@@ -35,7 +43,7 @@ body::after {
     align-items: center;
 }
 
-#page-search-result header a span {
+#page-search-result header .nav span {
     margin-right: 16px;
     background-image: url(./../assets/arrow-left.svg);
 
